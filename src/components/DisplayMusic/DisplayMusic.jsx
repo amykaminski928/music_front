@@ -1,26 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// render table to display songs and their data
+import React from 'react';
 
-const DisplayMusic = (props) => {
-    const [songs, setSongs] = useState([]);
 
-    useEffect(() => {
-    getAllSongs();
-    }, []);
+const DisplayMusic = ({songData}) => {
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Artist</th>
+          <th>Album</th>
+          <th>Release Date</th>
+          <th>Genre</th>
+        </tr>
+      </thead>
+      <tbody>
+        {songData.map((item, index) => (
+          <tr key ={index}>
+            <td>{item.title}</td>
+            <td>{item.artist}</td>
+            <td>{item.album}</td>
+            <td>{item.release_date}</td>
+            <td>{item.genre}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+};
+    
 
-    async function getAllSongs(){
-    const response = await axios.get('http://127.0.0.1:8000/music/');
-    console.log(response.data);
-    setSongs(response.data)
-    }
-    return (
-    <div className="Song_table">
-    <button onClick={() => getAllSongs}>Get All Songs</button>
-
-    </div>
-    );
-}
 
 export default DisplayMusic;   
+
 
 
