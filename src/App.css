@@ -1,0 +1,28 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+.custom-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #312b72;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+  }
+  
+  .custom-button:hover {
+    background-color: #3a7ac9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-button:active {
+    background-color: #2a6ab6;
+  }
+  

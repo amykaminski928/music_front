@@ -1,0 +1,50 @@
+.fun-table {
+    font-family: "Roboto", sans-serif;
+    flood-color: blanchedalmond;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+  }
+  
+  .fun-table thead tr {
+    background-color: #4a90e2;
+    color: #312b72;
+    text-transform: uppercase;
+  }
+  
+  .fun-table th {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 20px 30px;
+  }
+  
+  .fun-table tbody tr {
+    border-radius: 15px;
+    box-shadow: 0 0 15px #312b72;
+  }
+  
+  .fun-table td {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 20px 30px;
+    position: relative;
+  }
+  
+  .fun-table td::before {
+    content: "";
+    background-color: #4a90e2;
+    height: 100%;
+    left: -1px;
+    position: absolute;
+    top: 0;
+    width: 2px;
+  }
+  
+  .fun-table tbody tr:first-child td::before {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .fun-table tbody tr:last-child td::before {
+    border-bottom-left-radius: 15px;
+  }
+  

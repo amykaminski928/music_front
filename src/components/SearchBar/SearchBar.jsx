@@ -1,5 +1,6 @@
 // two dropdown menus one for search by element and one that searches by that elements available values (will use callback function as a prop to handle search changes)
 import React, {useState, useEffect} from 'react';
+import './SearchBar.css'
 
 const SearchBar = ({ songData, onSearchChange }) => {
     const [searchElement, setSearchElement] = useState('');
@@ -28,8 +29,8 @@ const SearchBar = ({ songData, onSearchChange }) => {
     };
 
     return (
-        <div>
-            <select value={searchElement} onChange={handleElementChange}>
+        <div >
+            <select className="menu-style" value={searchElement} onChange={handleElementChange}>
                 <option value="">Select element</option>
                 <option value="title">Title</option>
                 <option value="artist">Artist</option>
@@ -37,7 +38,7 @@ const SearchBar = ({ songData, onSearchChange }) => {
                 <option value="release_date">Release Date</option>
                 <option value="genre">Genre</option>                
             </select>
-            <select value={searchValue} onChange={handleValueChange}>
+            <select className="menu-style" value={searchValue} onChange={handleValueChange}>
                 <option value="">Select value</option>
                 {searchOptions.map((option, index) => (
                     <option key={index} value={option}>{option}                        

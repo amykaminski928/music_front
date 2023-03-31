@@ -1,6 +1,7 @@
 // Add new music to th api (use callback funstion as a prop to handle the form submission)
 
 import React, { useState } from 'react';
+import '../../App.css'
 
 const CreateSong = (props) => {
     const [title, setTitle] = useState('');
@@ -48,7 +49,7 @@ const CreateSong = (props) => {
                 <label>Genre:</label>
                 <input type= 'text' className="form-control" value={genre} onChange={(event) => setGenre(event.target.value)}/>
             </div>
-            <button type= 'submit' className="btn btn-outline-primary" style={{'margin-top': '1em'}}>ADD SONG</button>
+            <button type= 'submit' className="custom-button" style={{'margin-top': '1em'}}>ADD SONG</button>
         </form>
      );
 };

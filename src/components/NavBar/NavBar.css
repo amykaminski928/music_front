@@ -1,0 +1,16 @@
+.navbar {
+    background-color: #313b72;
+  }
+  
+  .navbar h1 {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 32px;
+    color: white;
+    margin: 0;
+  }
+  
+  .rectangle {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }

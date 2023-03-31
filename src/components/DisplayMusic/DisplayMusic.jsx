@@ -1,10 +1,10 @@
 // render table to display songs and their data
 import React from 'react';
-
+import "./DisplayMusic.css";
 
 const DisplayMusic = ({songData}) => {
   return (
-    <table>
+    <table className="table table-striped table-hover fun-table">
       <thead>
         <tr>
           <th>Title</th>

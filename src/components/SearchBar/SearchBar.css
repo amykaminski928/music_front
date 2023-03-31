@@ -1,0 +1,17 @@
+/* searchBar.css */
+.menu-style {
+    background-color: #312b72;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    padding: 6px 12px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-style:hover {
+    background-color: #ffd166;
+  }
+  

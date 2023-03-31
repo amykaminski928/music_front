@@ -6,6 +6,9 @@ import DisplayMusic from './components/DisplayMusic/DisplayMusic';
 import axios from 'axios';
 import SearchBar from './components/SearchBar/SearchBar';
 import CreateSong from './components/AddMusicForm/AddMusicForm';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
+
 
 const App = () =>  {
 
@@ -42,13 +45,30 @@ const App = () =>  {
     return (
     <div>
       <NavBar />
-      <DisplayMusic songData={filteredSongData.length ? filteredSongData : songData} />
-      <button onClick={getAllSongs}>Get All Songs</button>
-    
-      <SearchBar songData={songData} onSearchChange={handleSearchChange} />
-      <CreateSong onAddSong={handleAddSong} />
+      <div className="container">
+        <div className="row">
+          <div classname="col-lg-8">
+          <SearchBar songData={songData} onSearchChange={handleSearchChange} />
+            <DisplayMusic songData={filteredSongData.length ? filteredSongData : songData} />
+            <button className='custom-button'onClick={getAllSongs}>Get All Songs</button>
+          </div>
+          <div classname="col-lg-4">
+
+            <div className="row"> 
+              <div className="col-12">
+                <CreateSong onAddSong={handleAddSong} />
+              </div> 
+            </div>
+          </div>
+          <div className="row"> 
+            <div className="col-12">
+              
+            </div>
+          </div>
+        </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default App;   
